@@ -15,9 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<PackagesPage />}></Route>
-          <Route path='/experience' element={<SearchResultPage />}></Route>
-          <Route path='' element=""></Route>
-          <Route path='' element=""></Route>
+          <Route path='/experience' element={<SearchResultPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
