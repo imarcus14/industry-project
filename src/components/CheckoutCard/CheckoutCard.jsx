@@ -1,11 +1,23 @@
 import "./CheckoutCard.scss";
 
-const CheckoutCard = ({price, checkIn, checkOut, guests, weeklyDiscount, cleaningFee, taxes}) => {
+import { Button } from "../Button/Button";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+
+const CheckoutCard = ({price, checkIn, checkOut, guests, taxes, bundle}) => {
 
     let totalCost = Number(price) * 7;
     let totalTaxes = totalCost * Number(taxes);
     let totalServiceFee = totalCost * 0.14;
-    let stayCost = totalCost + 345 + Number(cleaningFee) + totalServiceFee + totalTaxes;
+    let stayCost = totalCost - 345 + 100 + totalServiceFee + totalTaxes;
+
+    // const [bundleAdd, setBundleAdd] = useState(false)
+
+    // const handleClick = () => {
+
+    // }
+
+
 
    
    
@@ -28,30 +40,30 @@ const CheckoutCard = ({price, checkIn, checkOut, guests, weeklyDiscount, cleanin
                     <p>{guests} guests</p>
                 </div>
             </div>
-            {/* Button Component */}
+            <Button style="--primary" text="Reserve" classModifier= "--checkout"/>
             <div className="card__price">
                 <p>{price} CAD x 7 nights</p>
                 <p>${totalCost} CAD</p>
             </div>
             <div className="card__discount">
                 <p>Weekly Stay Discount</p>
-                <p>-{weeklyDiscount} CAD</p>
+                <p>-345 CAD</p>
             </div>
             <div className="card__cleaning">
                 <p>Cleaning fee</p>
-                <p></p>
+                <p>$100 CAD</p>
             </div>
             <div className="card__service">
                 <p></p>
-                <p></p>
+                <p>${totalServiceFee} CAD</p>
             </div>
             <div className="card__taxes">
-                <p></p>
-                <p></p>
+                <p>Taxes</p>
+                <p>${totalTaxes} CAD</p>
             </div>
-            <div>
-                <p></p>
-                <p></p>
+            <div className="card__total">
+                <p>Total</p>
+                <p>${stayCost}</p>
             </div>
 
 
