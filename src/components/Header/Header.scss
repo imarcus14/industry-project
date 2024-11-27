@@ -1,13 +1,33 @@
 @use '../../styles/variables.scss' as *;
 
 .header {
-    display: flex;
-    justify-content: space-between;
     background-color: $primary-color3;
-    align-items: center;
     color: $primary-color2;
     padding: 1rem 5rem;
     border-bottom: 1px solid $secondary-color1;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 2rem;
+    }
+
+    &__nav-link {
+        font-size: 0.875rem;
+
+        &--selected {
+            font-weight: 600;
+        }
+    }
 
     &__settings {
         display: flex;
