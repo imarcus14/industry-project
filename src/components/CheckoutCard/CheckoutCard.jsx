@@ -4,24 +4,14 @@ import { Button } from "../Button/Button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const CheckoutCard = ({price, checkIn, checkOut, guests, taxes, bundle}) => {
+const CheckoutCard = ({ price, checkIn, checkOut, guests, taxes, addBundle }) => {
 
-    let totalCost = Number(price) * 7;
-    let totalTaxes = Math.round((totalCost * Number(taxes))*100)/100;
-    let totalServiceFee = Math.round((totalCost * 0.14)*100)/100;
+    let totalCost = addBundle ? Number(price) * 7 + 125 : Number(price) * 7;
+    let totalTaxes = Math.round((totalCost * Number(taxes)) * 100) / 100;
+    let totalServiceFee = Math.round((totalCost * 0.14) * 100) / 100;
     let stayCost = totalCost - 345 + 100 + totalServiceFee + totalTaxes;
 
-    // const [bundleAdd, setBundleAdd] = useState(false)
-
-    // const handleClick = () => {
-
-    // }
-
-
-
-   
-   
-    return ( 
+    return (
         <div className="card">
             <h3 className="card__title">${price} CAD <span>night</span></h3>
             <div className="card__date-wrapper">
@@ -33,14 +23,14 @@ const CheckoutCard = ({price, checkIn, checkOut, guests, taxes, bundle}) => {
                     <div className="card__check-out">
                         <p>checkout</p>
                         <p>{checkOut}</p>
-                    </div> 
-                </div>   
+                    </div>
+                </div>
                 <div className="card__guests">
                     <p>guests</p>
                     <p>{guests} guests</p>
                 </div>
             </div>
-            <Button style="primary" text="Reserve" classModifier= "checkout"/>
+            <Button style="primary" text="Reserve" classModifier="checkout" />
             <div className="card__price">
                 <p>{price} CAD x 7 nights</p>
                 <p>${totalCost} CAD</p>
@@ -61,6 +51,12 @@ const CheckoutCard = ({price, checkIn, checkOut, guests, taxes, bundle}) => {
                 <p>Taxes</p>
                 <p>${totalTaxes} CAD</p>
             </div>
+            {addBundle ? (
+                <div className="card__bundle">
+                    <p>Bundle add on</p>
+                    <p>$ 125</p>
+                </div>
+            ) : ('')}
             <div className="card__total">
                 <p>Total</p>
                 <p>${stayCost}</p>
@@ -69,7 +65,7 @@ const CheckoutCard = ({price, checkIn, checkOut, guests, taxes, bundle}) => {
 
         </div>
 
-     );
+    );
 }
- 
+
 export default CheckoutCard;

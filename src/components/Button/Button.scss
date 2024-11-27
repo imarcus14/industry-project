@@ -34,4 +34,8 @@
     &:hover {
         cursor: pointer;
     }
+
+    &--date-card {
+        align-self: flex-end;
+    }
 }

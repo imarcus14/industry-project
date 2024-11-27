@@ -1,11 +1,12 @@
 import './Header.scss'
 
+import { Link } from 'react-router-dom'
 import { Logo } from '../Logo/Logo'
 
 export function Header() {
     return (
         <header className='header'>
-            <Logo />
+            <Link to='/' ><Logo /></Link>
             <div className='header__search-filled'>
                 <span className='header__search-map'>Map Area</span>
                 <span className='header__search-dates'>Dec. 23, 2024 - Jan. 2, 2025</span>
