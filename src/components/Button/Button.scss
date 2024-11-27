@@ -1,0 +1,41 @@
+@use '../../styles/variables' as *;
+
+.button {
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    border: 0;
+    font-size: 0.875rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+    &--primary {
+        background-color: #D33753;
+        color: #FFF;
+    }
+
+    &--secondary {
+        background-color: #D9D9D9;
+        color: black;
+    }
+
+    &--tertiary {
+        background-color: #FFF;
+        border: 1px solid #222222;
+        color: #222222;
+
+        &:hover {
+            background-color: #ededed;
+        }
+    }
+
+    &--checkout {
+        width: 100%;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &--date-card {
+        align-self: flex-end;
+    }
+}

@@ -1,36 +1,37 @@
 
 
-.card{
+.cards{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     font-family: 'arial';
     font-size: 0.9375rem;
 
-    &__image{
+    &__image {
         width: 20rem;
-        height: 19rem;
+        min-height: 19rem;
         border-radius: 0.75rem;
     }
 
-    &__wrapper{
+    &__wrapper {
         display: flex;
         justify-content: space-between;
     }
 
-    &__wrapper-wrapper{
+    &__wrapper-wrapper {
         display: flex;
         align-items: center;
         gap: 0.3rem;
     }
 
-    &__location{
+    &__location {
         font-weight: 600;
     }
 
-    &__cost{
+    &__cost {
         font-weight: 600;
-        &--grey{
+
+        &--grey {
             text-decoration: underline;
             color: #6A6A6A;
             font-weight: 400;
