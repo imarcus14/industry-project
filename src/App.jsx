@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Footer from './components/Footer/Footer'
 import { PackagesPage } from './Pages/PackagesPage/PackagesPage'
-import { useState } from 'react'
+import { SearchResultPage } from './Pages/SearchResultPage/SearchResultPage'
 
 function App() {
 
@@ -15,11 +15,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<PackagesPage />}></Route>
-          <Route path='' element=""></Route>
+          <Route path='/experience' element={<SearchResultPage />}></Route>
           <Route path='' element=""></Route>
           <Route path='' element=""></Route>
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </>
   )
