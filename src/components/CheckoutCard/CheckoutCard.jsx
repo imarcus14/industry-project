@@ -7,8 +7,8 @@ import { useState } from "react";
 const CheckoutCard = ({price, checkIn, checkOut, guests, taxes, bundle}) => {
 
     let totalCost = Number(price) * 7;
-    let totalTaxes = totalCost * Number(taxes);
-    let totalServiceFee = totalCost * 0.14;
+    let totalTaxes = Math.round((totalCost * Number(taxes))*100)/100;
+    let totalServiceFee = Math.round((totalCost * 0.14)*100)/100;
     let stayCost = totalCost - 345 + 100 + totalServiceFee + totalTaxes;
 
     // const [bundleAdd, setBundleAdd] = useState(false)
@@ -40,7 +40,7 @@ const CheckoutCard = ({price, checkIn, checkOut, guests, taxes, bundle}) => {
                     <p>{guests} guests</p>
                 </div>
             </div>
-            <Button style="--primary" text="Reserve" classModifier= "--checkout"/>
+            <Button style="primary" text="Reserve" classModifier= "checkout"/>
             <div className="card__price">
                 <p>{price} CAD x 7 nights</p>
                 <p>${totalCost} CAD</p>
@@ -54,7 +54,7 @@ const CheckoutCard = ({price, checkIn, checkOut, guests, taxes, bundle}) => {
                 <p>$100 CAD</p>
             </div>
             <div className="card__service">
-                <p></p>
+                <p>Service Fee</p>
                 <p>${totalServiceFee} CAD</p>
             </div>
             <div className="card__taxes">
