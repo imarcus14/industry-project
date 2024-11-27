@@ -1,0 +1,57 @@
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    border-top: 0.063rem solid #DDDDDD;
+    width: 100%;
+    padding-top: 3rem;
+    font-family: 'arial';
+    font-size: 0.875rem;
+    color: #222222;
+    background-color: #F7F7F7;
+    &__top{
+        display: flex;
+        padding-bottom: 2rem;
+        border-bottom: 0.063rem solid #DDDDDD;
+        width: 90%;
+        margin: auto;
+        
+    }
+
+    &__sections{
+        width: 30%;
+        padding-left: 4rem;
+        line-height: 1.75rem;
+    }
+
+    &__bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 3rem 1rem 4rem;
+    }
+
+    &__bottom-left{
+        display: flex;
+        gap: 1rem;
+        
+    }
+
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &__icon{
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+    
+}
+
+.global-svg{
+    width: 1rem;
+    height: 1rem;
+}
