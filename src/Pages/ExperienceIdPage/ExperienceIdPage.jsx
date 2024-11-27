@@ -1,11 +1,11 @@
-import "./Screen3.scss";
+import "./ExperienceIdPage.scss";
 
 import CheckoutCard from "../../components/CheckoutCard/CheckoutCard";
 
-const Screen3 = () => {
+const ExperienceIdPage = () => {
     return ( 
         <CheckoutCard/>
      );
 }
  
-export default Screen3;
+export default ExperienceIdPage;
