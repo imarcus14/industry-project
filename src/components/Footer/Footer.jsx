@@ -1,3 +1,8 @@
+import facebook from "../../assets/facebook.svg"
+import global from "../../assets/global-svgrepo-com.svg"
+import instagram from "../../assets/instagram.svg"
+import twitter from "../../assets/twitter.svg"
+
 const Footer = () => {
     return ( 
         <div>
@@ -34,6 +39,20 @@ const Footer = () => {
             <hr></hr>
             <div>
                 <p>© 2024 Airbnb, Inc.· Privacy · Terms · Sitemap</p>
+
+                <div>
+                    <div>
+                        <img className="global-svg" src = {global} alt="Image of a globe with lines"/>
+                        <p>English(CA)</p>
+                    </div>
+                    <p>$ CAD</p>
+                    <div>
+                        <img src={facebook} alt="black facebook icon" />
+                        <img src={twitter} alt="black twitter icon" />
+                        <img src={instagram} alt="black instagram icon" />
+                    </div>
+                    
+                </div>
             </div>
         </div>
 
