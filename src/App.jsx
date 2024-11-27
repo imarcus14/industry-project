@@ -1,13 +1,11 @@
 import './App.scss'
+import './App.scss'
 
-<<<<<<< HEAD
-import Footer from './components/Footer/Footer'
-import { useState } from 'react'
-=======
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+import Footer from './components/Footer/Footer'
 import { PackagesPage } from './Pages/PackagesPage/PackagesPage'
->>>>>>> develop
+import { useState } from 'react'
 
 function App() {
 
@@ -21,6 +19,7 @@ function App() {
           <Route path='' element=""></Route>
           <Route path='' element=""></Route>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   )
