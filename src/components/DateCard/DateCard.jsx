@@ -2,7 +2,7 @@ import './DateCard.scss'
 
 import { Button } from '../Button/Button'
 
-export function DateCard({ date }) {
+export function DateCard({ date, handleClick }) {
     return (
         <div className='date-card'>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -10,7 +10,7 @@ export function DateCard({ date }) {
             </svg>
             <p className='date-card__date'>{date}</p>
             <p className='date-card__time'>1:00pm - 4:00pm</p>
-            <Button style='primary' classModifier='check-out' text='Add experience' />
+            <Button style='primary' classModifier='check-out' text='Add experience' handleClick={handleClick} />
         </div>
     )
 }

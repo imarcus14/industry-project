@@ -4,9 +4,9 @@ import { Button } from "../Button/Button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const CheckoutCard = ({ price, checkIn, checkOut, guests, taxes, bundle }) => {
+const CheckoutCard = ({ price, checkIn, checkOut, guests, taxes, addBundle }) => {
 
-    let totalCost = Number(price) * 7;
+    let totalCost = addBundle ? Number(price) * 7 + 125 : Number(price) * 7;
     let totalTaxes = Math.round((totalCost * Number(taxes)) * 100) / 100;
     let totalServiceFee = Math.round((totalCost * 0.14) * 100) / 100;
     let stayCost = totalCost - 345 + 100 + totalServiceFee + totalTaxes;
@@ -51,6 +51,12 @@ const CheckoutCard = ({ price, checkIn, checkOut, guests, taxes, bundle }) => {
                 <p>Taxes</p>
                 <p>${totalTaxes} CAD</p>
             </div>
+            {addBundle ? (
+                <div className="card__bundle">
+                    <p>Bundle add on</p>
+                    <p>$ 125</p>
+                </div>
+            ) : ('')}
             <div className="card__total">
                 <p>Total</p>
                 <p>${stayCost}</p>

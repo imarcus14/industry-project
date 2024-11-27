@@ -1,41 +1,41 @@
 @use '../../styles/variables.scss' as *;
 
-.page-container{
+.page-container {
     font-family: "arial";
 }
 
-.cabin{
+.cabin {
     width: 35.375rem;
     height: 31.188rem;
     padding: 0.3rem;
 
-    &__wrapper{
+    &__wrapper {
         display: flex;
         margin: auto;
         width: 90%;
         padding-bottom: 2rem;
     }
 
-    &__title{
+    &__title {
         width: 90%;
         margin: auto;
         padding: 1rem 0;
     }
 
-    &__content-wrapper{
+    &__content-wrapper {
         display: flex;
         flex-direction: column;
         width: 90%;
         padding-left: 6rem;
-        
+
     }
 
-    &__text-wrapper{
+    &__text-wrapper {
         display: flex;
         padding: 1rem 0;
     }
 
-    &__host-wrapper{
+    &__host-wrapper {
         display: flex;
         align-items: center;
         gap: 2rem;
@@ -45,7 +45,7 @@
         width: 50%;
     }
 
-    &__amenaties-wrapper{
+    &__amenaties-wrapper {
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -56,13 +56,13 @@
 
     }
 
-    &__amenaties-single{
+    &__amenaties-single {
         display: flex;
         gap: 1rem;
         align-items: center;
     }
 
-    &__extra-wrapper{
+    &__extra-wrapper {
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -73,45 +73,49 @@
 
     }
 
-    &__experiences-wrapper{
+    &__experiences-wrapper {
         display: flex;
         flex-direction: column;
     }
 
-    &__experiences-horizontal{
+    &__experiences-horizontal {
         display: flex;
         width: 50%;
     }
 
-    &__experience{
+    &__experience {
         width: 16.666666rem;
     }
 
-    &__bottom-container{
+    &__bottom-container {
         display: flex;
         gap: 0;
         justify-content: space-between;
-        
+        align-items: flex-start;
+
+    }
+
+    &__checkout-card {
+        margin: 0 10rem;
     }
 }
 
-.cabin-small{
+.cabin-small {
     width: 17rem;
     height: 15.438rem;
     padding: 0.3rem;
 
-    &__container{
+    &__container {
         display: flex;
-        
+
     }
 
-    &__duo-container{
+    &__duo-container {
         display: flex;
         flex-direction: column;
     }
 }
 
-.text-underline{
+.text-underline {
     text-decoration: underline;
 }
-

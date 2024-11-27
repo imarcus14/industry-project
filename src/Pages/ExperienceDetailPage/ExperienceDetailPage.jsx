@@ -10,8 +10,15 @@ import image3 from '../../assets/experienceDetail3.png'
 import image4 from '../../assets/experienceDetail4.png'
 import image5 from '../../assets/experienceDetail5.png'
 import profile from '../../assets/profile.svg'
+import { useState } from 'react'
 
 export function ExperienceDetaiPage() {
+    const [addBundle, setAddBundle] = useState(false)
+
+    const handleClick = () => {
+        setAddBundle(true)
+    }
+
     return (
         <div>
             <Header />
@@ -52,14 +59,14 @@ export function ExperienceDetaiPage() {
                         <section className='experience-detail__date-selection'>
                             <h3 className='experience-detail__title'>From $ 125 CAD /person</h3>
                             <div className='experience-detail__date-card-container'>
-                                <DateCard date='Mon, Dec 23' />
-                                <DateCard date='Tue, Dec 24' />
-                                <DateCard date='Fri, Dec 26' />
+                                <DateCard date='Mon, Dec 23' handleClick={handleClick} />
+                                <DateCard date='Tue, Dec 24' handleClick={handleClick} />
+                                <DateCard date='Fri, Dec 26' handleClick={handleClick} />
                             </div>
                         </section>
                     </div>
                     <div className='experience-detail__card-container'>
-                        <CheckoutCard price='397' checkIn='12-23-2024' checkOut='01-02-2025' guests='2' taxes='0.15' />
+                        <CheckoutCard price='397' checkIn='12-23-2024' checkOut='01-02-2025' guests='2' taxes='0.15' addBundle={addBundle} />
                     </div>
                 </div>
             </main>

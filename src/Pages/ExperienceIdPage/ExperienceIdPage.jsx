@@ -111,8 +111,9 @@ const ExperienceIdPage = () => {
                         </div>
                     </div>
                 </div>
-                <CheckoutCard price="397" checkIn="12-23-2024" checkOut="12-30-2024" guests="2" taxes="0.13" />
-
+                <div className="cabin__checkout-card">
+                    <CheckoutCard price="397" checkIn="12-23-2024" checkOut="12-30-2024" guests="2" taxes="0.13" />
+                </div>
             </div>
         </div>
     );
