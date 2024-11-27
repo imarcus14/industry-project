@@ -1,18 +1,17 @@
-import './App.css'
+import './App.scss'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import { useState } from 'react'
+import { PackagesPage } from './Pages/PackagesPage/PackagesPage'
 
 function App() {
-  
+
 
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route index element={""}></Route>
-          <Route path='' element=""></Route>
+          <Route path='/' element={<PackagesPage />}></Route>
           <Route path='' element=""></Route>
           <Route path='' element=""></Route>
           <Route path='' element=""></Route>
